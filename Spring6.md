@@ -8,13 +8,13 @@ Spring IOC 全称叫控制反转。在传统的Java程序开发里面，我们�
 
 
 
-![image-20240809090458957](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240809090458957.png)
+![image-20240809090458957](images/Spring6/image-20240809090458957.png)
 
 SpringBoot 和 ssm 框架的优劣势：
 
-![image-20240809091115168](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240809091115168.png)	
+![image-20240809091115168](images/Spring6/image-20240809091115168.png)	
 
-![image-20240809091154498](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240809091154498.png)
+![image-20240809091154498](images/Spring6/image-20240809091154498.png)
 
 
 
@@ -343,7 +343,7 @@ _**Cache of singleton factories: bean name to ObjectFactory. **_**单例工厂�
 
 **set注入的底层原理（通过反射机制）**
 
-![image-20240628173706894](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240628173706894.png)
+![image-20240628173706894](images/Spring6/image-20240628173706894.png)
 
 
 
@@ -423,7 +423,7 @@ public class OrderService {
 2. 在程序中，功能需要增强时。
 3. 在程序中，目标需要被保护时。
 
-![image-20240629074918728](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240629074918728.png)
+![image-20240629074918728](images/Spring6/image-20240629074918728.png)
 
 
 
@@ -488,7 +488,7 @@ public class UserService{
 - 目标对象 Target
   - 被织入通知的对象。
 
-![image-20240629121216360](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240629121216360.png)
+![image-20240629121216360](images/Spring6/image-20240629121216360.png)
 
 
 

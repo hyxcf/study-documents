@@ -1,4 +1,4 @@
-![image-20240809091642837](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240809091642837.png)
+![image-20240809091642837](images/SpringBoot3/image-20240809091642837.png)
 
 # SpringBoot3
 
@@ -176,7 +176,7 @@ starting（启动）-> environmentPrepared（环境准备完成）
 
 ### 1. 自动配置流程
 
-![img](https://cdn.nlark.com/yuque/0/2023/png/1613913/1681829645812-0f0cad01-66d4-42fc-8111-091e33a062c6.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_32%2Ctext_5bCa56GF6LC3IGF0Z3VpZ3UuY29t%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10)
+![img](images/SpringBoot3/1681829645812-0f0cad01-66d4-42fc-8111-091e33a062c6.png)
 
 1. 导入`starter`
 
@@ -288,7 +288,7 @@ starting（启动）-> environmentPrepared（环境准备完成）
 3. 编写Controller
 4. 提供启动类
 
-![image-20240705084704760](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240705084704760.png)
+![image-20240705084704760](images/SpringBoot3/image-20240705084704760.png)
 
 
 
@@ -451,7 +451,7 @@ starting（启动）-> environmentPrepared（环境准备完成）
 
 ##### Bean注册
 
-![image-20240705112131801](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240705112131801.png)
+![image-20240705112131801](images/SpringBoot3/image-20240705112131801.png)
 
 如果要注册的bean对象来自于第三方(不是自定义的)，是无法用@Component 及衍生注解声明bean的
 
@@ -540,7 +540,7 @@ starting（启动）-> environmentPrepared（环境准备完成）
 
 SpringBoot提供了设置注册生效条件的注解@Conditional
 
-![image-20240705141018738](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240705141018738.png)
+![image-20240705141018738](images/SpringBoot3/image-20240705141018738.png)
 
 
 
@@ -605,7 +605,7 @@ EnableAutoConfiguration 注解又组合了Import注解,导入了AutoConfiguratio
 
 **判断登录状态（添加拦截器）**
 
-![image-20240705184209866](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240705184209866.png)
+![image-20240705184209866](images/SpringBoot3/image-20240705184209866.png)
 
 编写拦截器
 

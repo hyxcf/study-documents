@@ -1,6 +1,6 @@
 # 				IO流
 
-![image-20240619224223934](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619224223934.png)
+![image-20240619224223934](images/IO流/image-20240619224223934.png)
 
 
 
@@ -316,7 +316,7 @@ FileReader和 FileWriter是**字符**流，即按照字符来操作IO
 
 - 节点流和处理流一览图
 
-![image-20240619140524138](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619140524138.png)  
+![image-20240619140524138](images/IO流/image-20240619140524138.png)  
 
 - 节点流和处理流的区别和联系
   1. 节点流是底层流/低级流,直接跟数据源相接。

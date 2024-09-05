@@ -1,4 +1,4 @@
-![image-20240623003422121](C:\Users\32596\AppData\Roaming\Typora\typora-user-images\image-20240623003422121.png)
+![image-20240623003422121](images/maven/image-20240623003422121.png)
 
 ```xml
     <!--maven工程的坐标-->
@@ -48,11 +48,11 @@ maven 依赖特性
 
 终止依赖传递：
 
-![image-20240623073753278](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623073753278.png)
+![image-20240623073753278](images/maven/image-20240623073753278.png)
 
 
 
-![image-20240623073813862](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623073813862.png)
+![image-20240623073813862](images/maven/image-20240623073813862.png)
 
 
 
@@ -60,13 +60,13 @@ maven 依赖特性
 
 
 
-![image-20240623074019371](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623074019371.png)
+![image-20240623074019371](images/maven/image-20240623074019371.png)
 
-![image-20240623074042294](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623074042294.png)
+![image-20240623074042294](images/maven/image-20240623074042294.png)
 
 手动解决依赖冲突：
 
-![image-20240623075620323](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623075620323.png)
+![image-20240623075620323](images/maven/image-20240623075620323.png)
 
 
 
@@ -142,13 +142,13 @@ maven 依赖特性
 
 ##### maven 私服
 
-![image-20240623081832108](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623081832108.png)
+![image-20240623081832108](images/maven/image-20240623081832108.png)
 
-![image-20240623081912124](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623081912124.png)
+![image-20240623081912124](images/maven/image-20240623081912124.png)
 
-![image-20240623081952080](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623081952080.png)
+![image-20240623081952080](images/maven/image-20240623081952080.png)
 
-![image-20240623082145577](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623082145577.png)
+![image-20240623082145577](images/maven/image-20240623082145577.png)
 
 
 
@@ -158,13 +158,13 @@ maven 依赖特性
 ./nexus /run
 ```
 
-![image-20240623083147986](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623083147986.png)
+![image-20240623083147986](images/maven/image-20240623083147986.png)
 
-![image-20240623083515545](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623083515545.png)
+![image-20240623083515545](images/maven/image-20240623083515545.png)
 
 
 
-![image-20240623083809932](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623083809932.png)
+![image-20240623083809932](images/maven/image-20240623083809932.png)
 
 ```xml
 	 <mirror>
@@ -177,7 +177,7 @@ maven 依赖特性
 
 
 
-![image-20240623084330941](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623084330941.png)
+![image-20240623084330941](images/maven/image-20240623084330941.png)
 
 ```xml
   <servers>
@@ -188,6 +188,6 @@ maven 依赖特性
     </server>
 ```
 
-![image-20240623084654702](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240623084654702.png)
+![image-20240623084654702](images/maven/image-20240623084654702.png)
 
 修改后自动导入新私服

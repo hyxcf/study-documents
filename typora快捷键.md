@@ -1,4 +1,4 @@
-![image-20240601102439146](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240601102439146.png)
+![image-20240601102439146](images/typora快捷键/image-20240601102439146.png)
 
 ## 常用快捷键
 
@@ -100,8 +100,8 @@
 
 
 
-上次看到这个视频还是在12H之前![[泠鸢yousa_大哭]](https://i0.hdslb.com/bfs/emote/3f757b147b9b1e201470eae7dac9cc0360172569.png@112w_112h.webp)，已同步到视频笔记，手机端右上角三个点笔记选项。
-省流![[水瓶座_灌水]](https://i0.hdslb.com/bfs/emote/57b277a56c5833460c8399c4a7b317eb98831095.png@112w_112h.webp)小管家:
+上次看到这个视频还是在12H之前![[泠鸢yousa_大哭]](images/typora快捷键/3f757b147b9b1e201470eae7dac9cc0360172569.png@112w_112h.webp)，已同步到视频笔记，手机端右上角三个点笔记选项。
+省流![[水瓶座_灌水]](images/typora快捷键/57b277a56c5833460c8399c4a7b317eb98831095.png@112w_112h.webp)小管家:
 ✔Java一条龙服务
 《卷》
 阶段①:Java入门，培养兴趣
@@ -110,7 +110,7 @@
 \>多写代码，少背代码
 \>找资料小技巧:评论区，新视频
 <Java知识>
-基础语法，面向![[热词系列_对象]](https://i0.hdslb.com/bfs/emote/a41763740a90c2b11bf282bf44ccee78066c98ff.png@112w_112h.webp)。
+基础语法，面向![[热词系列_对象]](images/typora快捷键/a41763740a90c2b11bf282bf44ccee78066c98ff.png@112w_112h.webp)。
 
 
 

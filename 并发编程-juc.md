@@ -126,13 +126,13 @@ Future Task能够接收Callable类型的参数，用来处理有返回结果的�
 
 - 状态包括程序计数器、虚拟机栈中每个栈帧的信息，如局部变量、操作数栈、返回地址等
 
--  Context Switch频繁发生会影响性能
+- Context Switch频繁发生会影响性能
 
 ## 3.4 常见方法
 
-![image-20240721000849853](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721000849853.png)
+![image-20240721000849853](images/并发编程-juc/image-20240721000849853.png)
 
-![image-20240721001152695](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721001152695.png)
+![image-20240721001152695](images/并发编程-juc/image-20240721001152695.png)
 
 
 
@@ -236,9 +236,9 @@ Future Task能够接收Callable类型的参数，用来处理有返回结果的�
 
 ##### 两阶段终止模式
 
-![image-20240721010616388](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721010616388.png)
+![image-20240721010616388](images/并发编程-juc/image-20240721010616388.png)
 
-![image-20240721010738847](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721010738847.png)
+![image-20240721010738847](images/并发编程-juc/image-20240721010738847.png)
 
 代码实现：
 
@@ -373,7 +373,7 @@ public class Test12SetDaemon {
 
 这是从 **操作系统** 层面来描述的
 
-![image-20240721015313275](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721015313275.png)
+![image-20240721015313275](images/并发编程-juc/image-20240721015313275.png)
 
 - 【初始状态】仅是在语言层面创建了线程对象，还未与操作系统线程关联
 
@@ -403,7 +403,7 @@ public class Test12SetDaemon {
 
 根据 Thread State 枚举，分为六种状态
 
-![image-20240721020018689](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721020018689.png)
+![image-20240721020018689](images/并发编程-juc/image-20240721020018689.png)
 
 - NEW 线程刚被创建,但是还没有调用 start() 方法
 - RUNNABLE当调用了start()方法之后，注意，Java API层面的 RUNNABLE状态涵盖了操作系统层面的【可运行状态】、【运行状态】和【阻塞状态】(由于BIO导致的线程阻塞，在Java里无法区分，仍然认为是可运行)
@@ -491,11 +491,11 @@ synchronized(对象)
 
 执行流程
 
-![image-20240721175749175](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721175749175.png)
+![image-20240721175749175](images/并发编程-juc/image-20240721175749175.png)
 
 
 
-![image-20240721175828326](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721175828326.png)
+![image-20240721175828326](images/并发编程-juc/image-20240721175828326.png)
 
 
 
@@ -559,7 +559,7 @@ class Test{
 
 其实就是考察synchronized锁住的是哪个对象
 
-![image-20240721180929520](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721180929520.png)
+![image-20240721180929520](images/并发编程-juc/image-20240721180929520.png)
 
 
 
@@ -604,7 +604,7 @@ class Test{
   - 它们的每个方法是原子的
   - 但**注意**它们多个方法的组合不是原子的，见后面分析
 
-![image-20240721184508087](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721184508087.png)
+![image-20240721184508087](images/并发编程-juc/image-20240721184508087.png)
 
 #### 不可变类线程安全性
 
@@ -638,9 +638,9 @@ String、Integer等都是不可变类，因为其内部的状态不可以改变�
 
 以 32 位虚拟机为例
 
-![image-20240721191201104](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721191201104.png)
+![image-20240721191201104](images/并发编程-juc/image-20240721191201104.png)
 
-![image-20240721191218201](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721191218201.png)
+![image-20240721191218201](images/并发编程-juc/image-20240721191218201.png)
 
 #### Monitor（锁）
 
@@ -650,7 +650,7 @@ Monitor被翻译为**监视器**或**管程**
 
 Monitor结构如下
 
-![image-20240721191441410](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721191441410.png)
+![image-20240721191441410](images/并发编程-juc/image-20240721191441410.png)
 
 - 刚开始Monitor中 Owner 为 null
 
@@ -681,19 +681,19 @@ Monitor结构如下
 
 假设有两个方法同步块，利用同一个对象加锁
 
-![image-20240721193144312](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193144312.png)
+![image-20240721193144312](images/并发编程-juc/image-20240721193144312.png)
 
 - 创建锁记录（Lock Record）对象，每个线程都的栈帧都会包含一个锁记录的结构，内部可以存储锁定对象的Mark Word
 
-![image-20240721193157279](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193157279.png)
+![image-20240721193157279](images/并发编程-juc/image-20240721193157279.png)
 
-![image-20240721193421644](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193421644.png)
+![image-20240721193421644](images/并发编程-juc/image-20240721193421644.png)
 
-![image-20240721193628524](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193628524.png)
+![image-20240721193628524](images/并发编程-juc/image-20240721193628524.png)
 
-![image-20240721193648210](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193648210.png)
+![image-20240721193648210](images/并发编程-juc/image-20240721193648210.png)
 
-![image-20240721193716523](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193716523.png)
+![image-20240721193716523](images/并发编程-juc/image-20240721193716523.png)
 
 
 
@@ -701,11 +701,11 @@ Monitor结构如下
 
 如果在尝试加轻量级锁的过程中，CAS操作无法成功，这时一种情况就是有其它线程为此对象加上了轻量级锁(有竞争)，这时需要进行锁膨胀，将轻量级锁变为重量级锁。
 
-![image-20240721193843191](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721193843191.png)
+![image-20240721193843191](images/并发编程-juc/image-20240721193843191.png)
 
-![image-20240721194143602](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721194143602.png)
+![image-20240721194143602](images/并发编程-juc/image-20240721194143602.png)
 
-![image-20240721194200275](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721194200275.png)
+![image-20240721194200275](images/并发编程-juc/image-20240721194200275.png)
 
 
 
@@ -713,11 +713,11 @@ Monitor结构如下
 
 重量级锁竞争的时候，还可以使用自旋来进行优化，如果当前线程自旋成功（即这时候持锁线程已经退出了同步块，释放了锁)，这时当前线程就可以避免阻塞。
 
-![image-20240721194327956](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721194327956.png)
+![image-20240721194327956](images/并发编程-juc/image-20240721194327956.png)
 
-![image-20240721194522180](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721194522180.png)
+![image-20240721194522180](images/并发编程-juc/image-20240721194522180.png)
 
-![image-20240721194545977](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721194545977.png)
+![image-20240721194545977](images/并发编程-juc/image-20240721194545977.png)
 
 
 
@@ -727,9 +727,9 @@ Monitor结构如下
 
 Java 6中引入了偏向锁来做进一步优化:只有第一次使用CAS将线程ID设置到对象的Mark Word头，之后发现这个线程ID是自己的就表示没有竞争，不用重新CAS。以后只要不发生竞争，这个对象就归该线程所有
 
-![image-20240721194907581](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721194907581.png)
+![image-20240721194907581](images/并发编程-juc/image-20240721194907581.png)
 
-![image-20240721195047529](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721195047529.png)
+![image-20240721195047529](images/并发编程-juc/image-20240721195047529.png)
 
 
 
@@ -737,9 +737,9 @@ Java 6中引入了偏向锁来做进一步优化:只有第一次使用CAS将线�
 
 回忆一下对象头格式
 
-![image-20240721195127176](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721195127176.png)
+![image-20240721195127176](images/并发编程-juc/image-20240721195127176.png)
 
-![image-20240721195500703](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721195500703.png)
+![image-20240721195500703](images/并发编程-juc/image-20240721195500703.png)
 
 #### 撤销 - 调用对象 hashCode
 
@@ -774,7 +774,7 @@ Java 6中引入了偏向锁来做进一步优化:只有第一次使用CAS将线�
 
 #### 原理之 wait / notify
 
-![image-20240721202155642](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721202155642.png)
+![image-20240721202155642](images/并发编程-juc/image-20240721202155642.png)
 
 - Owner线程发现条件不满足，调用wait方法，即可进入WaitSet变为WAITING状态
 - BLOCKED和WAITING的线程都处于阻塞状态，不占用CPU时间片
@@ -800,8 +800,8 @@ wait( long n)有时限的等待,到n毫秒后结束等待，或是被notify。
 ##### sleep(long n) 和 wait(long n)的区别（面试）
 
 -  sleep是Thread方法，而wait是Object的方法
-- sleep不需要强制和synchronized配合使用，但wait需要和synchronized一起用
-- sleep在睡眠的同时，不会释放对象锁的，但wait在等待的时候会释放对象锁。
+-  sleep不需要强制和synchronized配合使用，但wait需要和synchronized一起用
+-  sleep在睡眠的同时，不会释放对象锁的，但wait在等待的时候会释放对象锁。
 
 共同点：他们状态都是 TIMED_WAITING
 
@@ -832,7 +832,7 @@ synchronized(lock){
 - JDK中，join的实现、Future的实现，采用的就是此模式
 - 因为要等待另一方的结果，因此归类到同步模式
 
-![image-20240721205340056](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721205340056.png)
+![image-20240721205340056](images/并发编程-juc/image-20240721205340056.png)
 
 
 
@@ -892,17 +892,17 @@ LockSupport.unpark(暂停线程对象);
 
 #### 原理之 Park & Unpark
 
-![image-20240721222330968](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721222330968.png)
+![image-20240721222330968](images/并发编程-juc/image-20240721222330968.png)
 
-![image-20240721222755261](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721222755261.png)
+![image-20240721222755261](images/并发编程-juc/image-20240721222755261.png)
 
-![image-20240721222820620](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721222820620.png)
+![image-20240721222820620](images/并发编程-juc/image-20240721222820620.png)
 
-![image-20240721222847324](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721222847324.png)
+![image-20240721222847324](images/并发编程-juc/image-20240721222847324.png)
 
 #### 4.10 重新理解线程状态转换（重点）
 
-![image-20240721223035789](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721223035789.png)
+![image-20240721223035789](images/并发编程-juc/image-20240721223035789.png)
 
 假设有线程Thread t
 
@@ -919,11 +919,11 @@ LockSupport.unpark(暂停线程对象);
   - 竞争锁成功，**t线程**从 WAITING --> RUNNABLE
   - 竞争锁失败，**t线程**从 WAITING --> BLOCKED
 
-![image-20240721224316225](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721224316225.png)
+![image-20240721224316225](images/并发编程-juc/image-20240721224316225.png)
 
-![image-20240721224545942](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721224545942.png)
+![image-20240721224545942](images/并发编程-juc/image-20240721224545942.png)
 
-![image-20240721224724778](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721224724778.png)
+![image-20240721224724778](images/并发编程-juc/image-20240721224724778.png)
 
 
 
@@ -962,9 +962,9 @@ LockSupport.unpark(暂停线程对象);
 
 下面我讲一下我遇到的一个线程饥饿的例子，先来看看使用顺序加锁的方式解决之前的死锁问题
 
-![image-20240721230520714](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721230520714.png)
+![image-20240721230520714](images/并发编程-juc/image-20240721230520714.png)
 
-![image-20240721230545130](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721230545130.png)
+![image-20240721230545130](images/并发编程-juc/image-20240721230545130.png)
 
 ## 4.13 ReentrantLock
 
@@ -1033,7 +1033,7 @@ public class Test16ReentrantLockInterrupt {
 
 #### 锁超时（lock.trylock(Time.Unit)// 尝试(时间)获得锁）
 
-![image-20240721232434580](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240721232434580.png)
+![image-20240721232434580](images/并发编程-juc/image-20240721232434580.png)
 
 #### 公平锁
 
@@ -1131,25 +1131,25 @@ JMM体现在以下几个方面
 
 ## 5.2 可见性
 
-![image-20240722014824624](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722014824624.png)
+![image-20240722014824624](images/并发编程-juc/image-20240722014824624.png)
 
 分析：
 
 1. 初始状态，t线程刚开始从主内存读取了 run 的值到工作内存。
 
-![image-20240722014949509](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722014949509.png)
+![image-20240722014949509](images/并发编程-juc/image-20240722014949509.png)
 
 2. 因为t线程要频繁从主内存中读取run的值，但 **<u>JIT</u>** 编译器会将run的值缓存至自己工作内存中的高速缓存中，
 
    减少对主存中run的访问，提高效率
 
-![image-20240722015110115](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722015110115.png)
+![image-20240722015110115](images/并发编程-juc/image-20240722015110115.png)
 
 3. 1秒之后，main线程修改了run的值，并同步至主存，而t是从自己工作内存中的高速缓存中读取这个变量的
 
    值，结果永远是旧值
 
-![image-20240722015136919](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722015136919.png)
+![image-20240722015136919](images/并发编程-juc/image-20240722015136919.png)
 
 #### 解决方法
 
@@ -1159,7 +1159,7 @@ volatile(易变关键字)
 
 
 
-![image-20240722015547292](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722015547292.png)
+![image-20240722015547292](images/并发编程-juc/image-20240722015547292.png)
 
 ##### 注意
 
@@ -1179,7 +1179,7 @@ synchronized语句块既可以保证代码块的原子性，也同时保证代�
 
 ## 5.3 有序性
 
-![image-20240722023630132](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722023630132.png)
+![image-20240722023630132](images/并发编程-juc/image-20240722023630132.png)
 
 #### 2.指令重排序优化
 
@@ -1189,14 +1189,14 @@ synchronized语句块既可以保证代码块的原子性，也同时保证代�
 
 例如，每条指令都可以分为:`取指令`–`指令译码`–`执行指令`-`内存访问`–`数据写回`这5个阶段
 
-![image-20240722024025291](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722024025291.png)
+![image-20240722024025291](images/并发编程-juc/image-20240722024025291.png)
 
 
 #### 3. 支持流水线的处理器
 
 现代CPU支持多级指令流水线，例如支持同时执行`取指令`–`指令译码`–`执行指令`-`内存访问`–`数据写回`的处理器，就可以称之为**五级指令流水线**。这时CPU可以在一个时钟周期内，同时运行五条指令的不同阶段(相当于一条执行时间最长的复杂指令)，IPC = 1，本质上，流水线技术并不能缩短单条指令的执行时间，但它变相地提高了指令地吞吐率。
 
-![image-20240722024210383](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722024210383.png)
+![image-20240722024210383](images/并发编程-juc/image-20240722024210383.png)
 
  在不改变程序结果的前提下，这些指令的各个阶段可以通过**重排序**和**组合**来实现**指令级并行**，这一技术在80's中叶到90's 中叶占据了计算架构的重要地位。
 
@@ -1204,9 +1204,9 @@ synchronized语句块既可以保证代码块的原子性，也同时保证代�
 
 指令重排的前提是，重排指令不能影响结果。
 
-![image-20240722024953796](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722024953796.png)
+![image-20240722024953796](images/并发编程-juc/image-20240722024953796.png)
 
-![image-20240722025024484](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722025024484.png)
+![image-20240722025024484](images/并发编程-juc/image-20240722025024484.png)
 
 #### 指令重排-禁用
 
@@ -1226,7 +1226,7 @@ volatile的底层实现原理是内存屏障，Memory Barrier (Memory Fence)
 
 - 而读屏障(lfence)保证在该屏障之后，对共享变量的读取，加载的是主存中最新数据
 
-![image-20240722025804782](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722025804782.png)
+![image-20240722025804782](images/并发编程-juc/image-20240722025804782.png)
 
 #### 2. 如何保证有序性
 
@@ -1245,7 +1245,7 @@ volatile的底层实现原理是内存屏障，Memory Barrier (Memory Fence)
 
 以著名的double-checked locking单例模式为例
 
-![image-20240722030819622](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722030819622.png)
+![image-20240722030819622](images/并发编程-juc/image-20240722030819622.png)
 
 以上的实现特点是：
 
@@ -1257,11 +1257,11 @@ volatile的底层实现原理是内存屏障，Memory Barrier (Memory Fence)
 
 #### 4.double-checked locking 解决
 
-![image-20240722031537191](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722031537191.png)
+![image-20240722031537191](images/并发编程-juc/image-20240722031537191.png)
 
 因为使用 volatile 关键字，加入了写屏障，阻止了指令重排序。
 
-![image-20240722031737709](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722031737709.png)
+![image-20240722031737709](images/并发编程-juc/image-20240722031737709.png)
 
 #### happens-before
 
@@ -1269,19 +1269,19 @@ happens-before规定了对共享变量的写操作对其它线程的读操作可
 
 - 线程解锁m之前对变量的写，对于接下来对m加锁的其它线程对该变量的读可见
 
-  ![image-20240722162216549](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722162216549.png)
+  ![image-20240722162216549](images/并发编程-juc/image-20240722162216549.png)
 
 - 线程对volatile变量的写，对接下来其它线程对该变量的读可见
 
-  ![image-20240722162309071](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722162309071.png)
+  ![image-20240722162309071](images/并发编程-juc/image-20240722162309071.png)
 
 - 线程start前对变量的写，对该线程开始后对该变量的读可见
 
-  ![image-20240722162339938](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722162339938.png)
+  ![image-20240722162339938](images/并发编程-juc/image-20240722162339938.png)
 
 - 线程结束前对变量的写，对其它线程得知它结束后的读可见(比如其它线程调用 t1.isAlive()或t1.join()等待它结束)
 
-  ![image-20240722162451364](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722162451364.png)
+  ![image-20240722162451364](images/并发编程-juc/image-20240722162451364.png)
 
 - 线程t1打断 t2 ( interrupt）前对变量的写，对于其他线程得知t2被打断后对变量的读可见（通过t2.interrupted或 t2.isInterrupted)
 
@@ -1289,7 +1289,7 @@ happens-before规定了对共享变量的写操作对其它线程的读操作可
 
 - 具有传递性，如果x hb-> y并且y hb-> z那么有x hb-> z，配合volatile的防指令重排，有下面的例子
 
-  ![image-20240722162735192](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722162735192.png)
+  ![image-20240722162735192](images/并发编程-juc/image-20240722162735192.png)
 
   
 
@@ -1327,13 +1327,13 @@ happens-before规定了对共享变量的写操作对其它线程的读操作可
 
 前面看到的AtomicInteger的解决方法，内部并没有用锁来保护共享变量的线程安全。那么它是如何实现的呢?
 
-![image-20240722165514834](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722165514834.png)
+![image-20240722165514834](images/并发编程-juc/image-20240722165514834.png)
 
 其中的关键是compareAndSet，它的简称就是CAS (也有Compare And Swap的说法)，它必须是原子操作。
 
-![image-20240722165552548](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722165552548.png)
+![image-20240722165552548](images/并发编程-juc/image-20240722165552548.png)
 
-![image-20240722165835334](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722165835334.png)
+![image-20240722165835334](images/并发编程-juc/image-20240722165835334.png)
 
 
 
@@ -1349,7 +1349,7 @@ happens-before规定了对共享变量的写操作对其它线程的读操作可
 
 **<u>CAS必须借助volatile才能读取到共享变量的最新值来实现【比较并交换】的效果</u>**
 
-![image-20240722170351796](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722170351796.png)
+![image-20240722170351796](images/并发编程-juc/image-20240722170351796.png)
 
   
 
@@ -1358,7 +1358,7 @@ happens-before规定了对共享变量的写操作对其它线程的读操作可
 <u>结合CAS和volatile可以实现无锁并发</u>，适用于线程数少、多核CPU的场景下。
 
 - CAS是基于乐观锁的思想：最乐观的估计，不怕别的线程来修改共享变量，就算改了也没关系，我吃亏点再重试呗。
--  synchronized是基于悲观锁的思想：最悲观的估计，得防着其它线程来修改共享变量，我上了锁你们都别想改，我改完了解开锁，你们才有机会。
+- synchronized是基于悲观锁的思想：最悲观的估计，得防着其它线程来修改共享变量，我上了锁你们都别想改，我改完了解开锁，你们才有机会。
 
 - CAS体现的是无锁并发、无阻塞并发，请仔细体会这两句话的意思
   - 因为没有使用synchronized，所以线程不会陷入阻塞，这是效率提升的因素之一
@@ -1476,17 +1476,17 @@ transient volatile int cellsBusy ;
 
 其中Cell即为累加单元
 
-![image-20240722181720683](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722181720683.png)
+![image-20240722181720683](images/并发编程-juc/image-20240722181720683.png)
 
-![image-20240722181845741](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722181845741.png)
+![image-20240722181845741](images/并发编程-juc/image-20240722181845741.png)
 
-![image-20240722181900752](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722181900752.png)
+![image-20240722181900752](images/并发编程-juc/image-20240722181900752.png)
 
-![image-20240722182107693](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722182107693.png)
+![image-20240722182107693](images/并发编程-juc/image-20240722182107693.png)
 
-![image-20240722182501732](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722182501732.png)
+![image-20240722182501732](images/并发编程-juc/image-20240722182501732.png)
 
-![image-20240722182533349](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722182533349.png)
+![image-20240722182533349](images/并发编程-juc/image-20240722182533349.png)
 
 
 
@@ -1565,7 +1565,7 @@ Unsafe 对象提供了非常底层的，操作内存、线程的方法CUnsafe对
 
 另一个大家更为熟悉的String类也是不可变的，以它为例，说明一下不可变设计的要素
 
-![image-20240722190148666](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722190148666.png)
+![image-20240722190148666](images/并发编程-juc/image-20240722190148666.png)
 
 #### final的使用
 
@@ -1578,11 +1578,11 @@ Unsafe 对象提供了非常底层的，操作内存、线程的方法CUnsafe对
 
 但有同学会说，使用字符串时，也有一些跟修改相关的方法啊，比如substring等，那么下面就看一看这些方法是如何实现的，就以substring为例:
 
-![image-20240722190504081](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722190504081.png)
+![image-20240722190504081](images/并发编程-juc/image-20240722190504081.png)
 
 发现其内部是调用String的构造方法创建了一个新字符串，再进入这个构造看看，是否对final char[]value做出了修改:
 
-![image-20240722190611608](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722190611608.png)
+![image-20240722190611608](images/并发编程-juc/image-20240722190611608.png)
 
 结果发现也没有，构造新字符串对象时，会生成新的char[]value，对内容进行复制。这种通过创建副本对象来避免共享的手段称之为【保护性拷贝(defensive copy) 】
 
@@ -1626,13 +1626,13 @@ Unsafe 对象提供了非常底层的，操作内存、线程的方法CUnsafe对
 
 ##### 本章内容
 
-![image-20240722205055289](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722205055289.png)
+![image-20240722205055289](images/并发编程-juc/image-20240722205055289.png)
 
 
 
 ## 8.1 线程池
 
-![image-20240722205140480](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722205140480.png)
+![image-20240722205140480](images/并发编程-juc/image-20240722205140480.png)
 
 步骤1:自定义拒绝策略接口
 
@@ -1640,17 +1640,17 @@ Unsafe 对象提供了非常底层的，操作内存、线程的方法CUnsafe对
 
 ## 8.2  ThreadPoolExecutor
 
-![image-20240722215830268](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722215830268.png)
+![image-20240722215830268](images/并发编程-juc/image-20240722215830268.png)
 
 #### 1）线程池状态
 
 ThreadPoolExecutor使用int的高3位来表示线程池状态，低29位表示线程数量I
 
-![image-20240722220003116](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722220003116.png)
+![image-20240722220003116](images/并发编程-juc/image-20240722220003116.png)
 
 这些信息存储在一个原子变量ctl中，目的是将线程池状态与线程个数合二为一，这样就可以用一次cas原子操作进行赋值
 
-![image-20240722220705854](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722220705854.png)
+![image-20240722220705854](images/并发编程-juc/image-20240722220705854.png)
 
 #### 2) 构造方法（七大核心参数，重要）
 
@@ -1674,7 +1674,7 @@ public ThreadPoolExecutor(	int corePoolsize,
 
 工作方式：
 
-![image-20240722221030188](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722221030188.png)
+![image-20240722221030188](images/并发编程-juc/image-20240722221030188.png)
 
 - 线程池中刚开始没有线程，当一个任务提交给线程池后，线程池会创建一个新线程来执行任务。
 - 当线程数达到corePoolSize并没有线程空闲，这时再加入任务，新加的任务会被加入workQueue队列排队，直到有空闲的线程。
@@ -1691,13 +1691,13 @@ public ThreadPoolExecutor(	int corePoolsize,
 
 - 当高峰过去后，超过corePoolSize的救急线程如果一段时间没有任务做，需要结束节省资源，这个时间由keepAliveTime和unit来控制。
 
-![image-20240722221648260](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722221648260.png)
+![image-20240722221648260](images/并发编程-juc/image-20240722221648260.png)
 
 根据这个构造方法，JDKExecutors类中提供了众多工厂方法来创建各种用途的线程池
 
 #### 3）newFixedThreadPool（固定大小的线程池，没有救急线程）
 
-![image-20240722222002435](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722222002435.png)
+![image-20240722222002435](images/并发编程-juc/image-20240722222002435.png)
 
 特点
 
@@ -1711,7 +1711,7 @@ public ThreadPoolExecutor(	int corePoolsize,
 
 #### 4） newCachedThreadPool
 
-![image-20240722222547695](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722222547695.png)
+![image-20240722222547695](images/并发编程-juc/image-20240722222547695.png)
 
 特点
 
@@ -1789,7 +1789,7 @@ throws InterruptedException，ExecutionException;
 void shutddwn( );
 ```
 
-![image-20240722225256648](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722225256648.png)
+![image-20240722225256648](images/并发编程-juc/image-20240722225256648.png)
 
 ##### shutdownNow
 
@@ -1803,17 +1803,17 @@ void shutddwn( );
 List<Runnable>shutdownNow( );
 ```
 
-![image-20240722225432766](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722225432766.png)
+![image-20240722225432766](images/并发编程-juc/image-20240722225432766.png)
 
 ##### 其他方法
 
-![image-20240722225501303](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722225501303.png)
+![image-20240722225501303](images/并发编程-juc/image-20240722225501303.png)
 
 #### 8）任务调度线程池
 
 在『任务调度线程池』功能加入之前，可以使用java.util.Timer来实现定时功能，Timer的优点在于简单易用，但由于所有任务都是由同一个线程来调度，因此所有任务都是<u>串行执行</u>的，同一时间只能有一个任务在执行，前一个任务的延迟或异常都将会影响到之后的任务。
 
-![image-20240722232039614](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722232039614.png)
+![image-20240722232039614](images/并发编程-juc/image-20240722232039614.png)
 
 #### 9) 可以使用 Executors.newScheduledThreadPool 代替。
 
@@ -1860,25 +1860,25 @@ ScheduledExecutorService pool = Executors.newScheduledThreadPool(1);
 
 #### Tomcat 线程池
 
-![image-20240722235512172](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722235512172.png)
+![image-20240722235512172](images/并发编程-juc/image-20240722235512172.png)
 
-![](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722235718441.png)
+![](images/并发编程-juc/image-20240722235718441.png)
 
-![image-20240722235948288](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240722235948288.png)
+![image-20240722235948288](images/并发编程-juc/image-20240722235948288.png)
 
-![image-20240723000212820](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723000212820.png)
+![image-20240723000212820](images/并发编程-juc/image-20240723000212820.png)
 
-![image-20240723000424961](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723000424961.png)
+![image-20240723000424961](images/并发编程-juc/image-20240723000424961.png)
 
 #### 8.3 Fork / Join（递归）
 
 ##### 1）概念
 
-![image-20240723000621272](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723000621272.png)
+![image-20240723000621272](images/并发编程-juc/image-20240723000621272.png)
 
 ##### 2）使用
 
-![image-20240723001204659](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723001204659.png)
+![image-20240723001204659](images/并发编程-juc/image-20240723001204659.png)
 
 ## 9  J.U.C
 
@@ -1924,22 +1924,22 @@ ScheduledExecutorService pool = Executors.newScheduledThreadPool(1);
    - 提供了基于FIFO的等待队列,类似于Monitor的EntryList
    - 条件变量来实现等待、唤醒机制，支持多个条件变量，
    - 类似于Monitor的WaitSet
-   
+
    子类主要实现这样一些方法（默认抛出 UnsupportedOperationException）
-   
+
    - tryAcquire
    - tryRelease
    - tryAcquireShared
    - tryReleaseShared
    - isHeldExclusively
 
-![image-20240723012502836](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723012502836.png)
+![image-20240723012502836](images/并发编程-juc/image-20240723012502836.png)
 
 
 
 ### 9.2 ReentrantLock 原理
 
-![image-20240723121326699](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723121326699.png)
+![image-20240723121326699](images/并发编程-juc/image-20240723121326699.png)
 
 ##### 1.  非公平锁实现原理
 
@@ -1957,11 +1957,11 @@ NonfairSync继承自AQS
 
 没有竞争时
 
-![image-20240723121509905](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723121509905.png)
+![image-20240723121509905](images/并发编程-juc/image-20240723121509905.png)
 
 第一个竞争出现时
 
-![image-20240723121658233](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723121658233.png)
+![image-20240723121658233](images/并发编程-juc/image-20240723121658233.png)
 
 Thread-1执行了
 
@@ -1977,7 +1977,7 @@ Thread-1执行了
 
   - 其中第一个Node称为Dummy(哑元)或哨兵，用来占位，并不关联线程
 
-![image-20240723121936544](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723121936544.png)
+![image-20240723121936544](images/并发编程-juc/image-20240723121936544.png)
 
 当前线程进入acquireQueued逻辑
 
@@ -1985,24 +1985,24 @@ Thread-1执行了
 2. 如果自己是紧邻着head(排第二位)，那么再次 tryAcquire尝试获取锁，当然这时state仍为1，失败
 3. 进入shouldParkAfterFailedAcquire逻辑，将前驱node，即head的 waitStatus改为-1，这次返回false
 
-![image-20240723122217915](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723122217915.png)
+![image-20240723122217915](images/并发编程-juc/image-20240723122217915.png)
 
 4. shouldParkAfterFailedAcquire执行完毕回到acquireQueued，再次 tryAcquire尝试获取锁，当然这时state仍为1，失败
 5. 当再次进入shouldParkAfterFailedAcquire时，这时因为其前驱node的waitStatus已经是-1，这次返回true
 6. 进入parkAndCheckInterrupt，Thread-1 park(灰色表示)
 
-![image-20240723122324905](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723122324905.png)
+![image-20240723122324905](images/并发编程-juc/image-20240723122324905.png)
 
 再次有多个线程经历上述过程竞争失败，变成这个样子
 
-![image-20240723122646093](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723122646093.png)
+![image-20240723122646093](images/并发编程-juc/image-20240723122646093.png)
 
 Thread-0释放锁，进入tryRelease流程，如果成功
 
 - 设置exclusiveOwnerThread为null
 - state = 0
 
-![image-20240723122810127](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723122810127.png)
+![image-20240723122810127](images/并发编程-juc/image-20240723122810127.png)
 
 当前队列不为null，并且head的waitStatus = - 1，进入unparkSuccessor 流程
 
@@ -2010,9 +2010,9 @@ Thread-0释放锁，进入tryRelease流程，如果成功
 
 回到Thread-1的acquireQucued流程
 
-![image-20240723122909624](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723122909624.png)
+![image-20240723122909624](images/并发编程-juc/image-20240723122909624.png)
 
-![image-20240723123051730](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723123051730.png)
+![image-20240723123051730](images/并发编程-juc/image-20240723123051730.png)
 
 
 
@@ -2093,19 +2093,19 @@ Thread-0释放锁，进入tryRelease流程，如果成功
 
 为-2(Node.CONDITION)，关联Thread-0，加入等待队列尾部
 
-![image-20240723125842123](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723125842123.png)
+![image-20240723125842123](images/并发编程-juc/image-20240723125842123.png)
 
 接下来进入AQS的fullyRelease流程，释放同步器上的锁
 
-![image-20240723130105370](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723130105370.png)
+![image-20240723130105370](images/并发编程-juc/image-20240723130105370.png)
 
 unpark AQS队列中的下一个节点，竞争锁，假设没有其他竞争线程，那么Thread-1竞争成功
 
-![image-20240723130315129](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723130315129.png)
+![image-20240723130315129](images/并发编程-juc/image-20240723130315129.png)
 
 park 阻塞 Thread-0
 
-![image-20240723130334335](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723130334335.png)
+![image-20240723130334335](images/并发编程-juc/image-20240723130334335.png)
 
 
 
@@ -2113,15 +2113,15 @@ park 阻塞 Thread-0
 
 假设Thread-1要来唤醒Thread-0
 
-![image-20240723130454184](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723130454184.png)
+![image-20240723130454184](images/并发编程-juc/image-20240723130454184.png)
 
 进入ConditionObject的doSignal流程，取得等待队列中第一个Node，即 Thread-0所在Node
 
-![image-20240723131048524](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723131048524.png)
+![image-20240723131048524](images/并发编程-juc/image-20240723131048524.png)
 
 执行transferForSignal流程，将该Node加入AQS队列尾部，将Thread-0的waitStatus改为0,Thread-3的waitStatus 改为-1
 
-![image-20240723131112049](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723131112049.png)
+![image-20240723131112049](images/并发编程-juc/image-20240723131112049.png)
 
 Thread-1释放锁,进入unlock 流程,略
 
@@ -2158,33 +2158,33 @@ Thread-1释放锁,进入unlock 流程,略
 
 l） t1成功上锁，流程与ReentrantLock加锁相比没有特殊之处，不同是写锁状态占了state的低16位，而读锁使用的是state的高16位
 
-![image-20240723135221006](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723135221006.png)
+![image-20240723135221006](images/并发编程-juc/image-20240723135221006.png)
 
 2 ) t2执行r.lock，这时进入读锁的sync.acquireShared(1)流程，首先会进入tryAcquireShared流程。如果有写锁占据，那么tryAcquireShared返回-1表示失败
 
-![image-20240723135717259](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723135717259.png)
+![image-20240723135717259](images/并发编程-juc/image-20240723135717259.png)
 
-![image-20240723135910687](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723135910687.png)
+![image-20240723135910687](images/并发编程-juc/image-20240723135910687.png)
 
-![image-20240723143947021](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723143947021.png)
+![image-20240723143947021](images/并发编程-juc/image-20240723143947021.png)
 
-![image-20240723144039055](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723144039055.png)
+![image-20240723144039055](images/并发编程-juc/image-20240723144039055.png)
 
-![image-20240723144216158](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723144216158.png)
+![image-20240723144216158](images/并发编程-juc/image-20240723144216158.png)
 
-![image-20240723144614519](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723144614519.png)
+![image-20240723144614519](images/并发编程-juc/image-20240723144614519.png)
 
-![](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723144529787.png)
+![](images/并发编程-juc/image-20240723144529787.png)
 
-![image-20240723144903804](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723144903804.png)
+![image-20240723144903804](images/并发编程-juc/image-20240723144903804.png)
 
-![image-20240723144919853](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723144919853.png)![image-20240723145012711](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723145012711.png)
+![image-20240723144919853](images/并发编程-juc/image-20240723144919853.png)![image-20240723145012711](images/并发编程-juc/image-20240723145012711.png)
 
-![image-20240723145111956](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723145111956.png)
+![image-20240723145111956](images/并发编程-juc/image-20240723145111956.png)
 
-![image-20240723145201670](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723145201670.png)
+![image-20240723145201670](images/并发编程-juc/image-20240723145201670.png)
 
-![image-20240723145307817](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723145307817.png)
+![image-20240723145307817](images/并发编程-juc/image-20240723145307817.png)
 
 
 
@@ -2192,7 +2192,7 @@ l） t1成功上锁，流程与ReentrantLock加锁相比没有特殊之处，不
 
 该类自JDK 8加入，是为了进一步优化读性能，它的特点是在使用读锁、写锁时都必须配合【戳】使用
 
-![image-20240723145502202](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723145502202.png)
+![image-20240723145502202](images/并发编程-juc/image-20240723145502202.png)
 
 乐观读，StampedLock支持tryoptimisticRead()方法(乐观读)，读取完毕后需要做一次戳校验如果校验通过，表示这期间确实没有写操作，数据可以安全使用，如果校验没通过，需要重新获取读锁，保证数据安全。
 
@@ -2220,13 +2220,13 @@ Semaphore有点像一个停车场,permits 就好像停车位数量，当线程�
 
 刚开始,permits (state)为3，这时5个线程来获取资源
 
-![image-20240723152210545](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723152210545.png)
+![image-20240723152210545](images/并发编程-juc/image-20240723152210545.png)
 
 假设其中Thread-1，Thread-2，Thread-4 cas竞争成功，而Thread-0和Thread-3竞争失败，进入AQS队列 park阻塞
 
-![image-20240723152627362](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723152627362.png)
+![image-20240723152627362](images/并发编程-juc/image-20240723152627362.png)
 
-![image-20240723152608768](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723152608768.png)
+![image-20240723152608768](images/并发编程-juc/image-20240723152608768.png)
 
 
 
@@ -2276,7 +2276,7 @@ public class Test31CountDownLatch {
 
 #### 7. 线程安全集合类概述
 
-![image-20240723161657778](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723161657778.png)
+![image-20240723161657778](images/并发编程-juc/image-20240723161657778.png)
 
 线程安全集合类可以分为三大类:
 
@@ -2296,7 +2296,7 @@ public class Test31CountDownLatch {
 
 重点介绍java.util.concurrent.*下的线程安全集合类，可以发现它们有规律，里面包含三类关键词:
 
-![image-20240723162108284](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723162108284.png)
+![image-20240723162108284](images/并发编程-juc/image-20240723162108284.png)
 
 
 
@@ -2313,25 +2313,25 @@ public class Test31CountDownLatch {
 
 重要属性和内部类
 
-![image-20240723164609191](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723164609191.png)
+![image-20240723164609191](images/并发编程-juc/image-20240723164609191.png)
 
-![image-20240723164944814](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723164944814.png)
+![image-20240723164944814](images/并发编程-juc/image-20240723164944814.png)
 
-![image-20240723165021824](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723165021824.png)
+![image-20240723165021824](images/并发编程-juc/image-20240723165021824.png)
 
 ##### get流程
 
-![image-20240723165438693](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723165438693.png)
+![image-20240723165438693](images/并发编程-juc/image-20240723165438693.png)
 
 ##### put 流程（以后二刷）
 
-·![image-20240723172309537](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723172309537.png)
+·![image-20240723172309537](images/并发编程-juc/image-20240723172309537.png)
 
 
 
 ##### size计算流程
 
-![image-20240723173119308](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723173119308.png)
+![image-20240723173119308](images/并发编程-juc/image-20240723173119308.png)
 
 
 
@@ -2350,19 +2350,19 @@ public class Test31CountDownLatch {
 
 1.基本的入队出队
 
-![image-20240723174130249](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723174130249.png)
+![image-20240723174130249](images/并发编程-juc/image-20240723174130249.png)
 
 2. 加锁分析
 
-![image-20240723175026951](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723175026951.png)
+![image-20240723175026951](images/并发编程-juc/image-20240723175026951.png)
 
-![image-20240723180221242](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723180221242.png)
+![image-20240723180221242](images/并发编程-juc/image-20240723180221242.png)
 
 
 
 #### 10. ConcurrentLinkedQueue
 
-![image-20240723180353001](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240723180353001.png)
+![image-20240723180353001](images/并发编程-juc/image-20240723180353001.png)
 
 
 

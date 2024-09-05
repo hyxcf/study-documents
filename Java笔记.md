@@ -84,21 +84,21 @@
 
    案例:请将34转成二进制= 0b00100010
 
-   ![image-20240802203507271](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240802203507271.png)
+   ![image-20240802203507271](images/Java笔记/image-20240802203507271.png)
 
 2. 十进制转八进制
 
    规则:将该数不断除以8，直到商为0为止，然后将每步得到的余数倒过来，就是对应的八进制。
    案例:请将131转成八进制=> 0203
 
-   ![image-20240802203742733](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240802203742733.png)
+   ![image-20240802203742733](images/Java笔记/image-20240802203742733.png)
 
 3. 十进制转十六进制
 
    规则:将该数不断除以16，直到商为0为止，然后将每步得到的余数倒过来，就是对应的十六进制。
    案例:请将237转成十六进制=> 0xED
 
-![image-20240802203911114](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240802203911114.png)
+![image-20240802203911114](images/Java笔记/image-20240802203911114.png)
 
 - 第三组
 
@@ -148,13 +148,13 @@
 
 #### 原码、反码、补码（重点、难点）
 
-![image-20240802205601131](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240802205601131.png)
+![image-20240802205601131](images/Java笔记/image-20240802205601131.png)
 
 
 
 #### 位运算
 
-![image-20240802205635580](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240802205635580.png)
+![image-20240802205635580](images/Java笔记/image-20240802205635580.png)
 
 ```java
 // 1.先得到 2的补码 -> 2 的原码 00000000 00000000 00000000 00000010
@@ -187,7 +187,7 @@ System.out.println(~2);
 
 #### 位运算符
 
-![image-20240802212230330](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240802212230330.png)
+![image-20240802212230330](images/Java笔记/image-20240802212230330.png)
 
 ```java
 int a = 1 >> 2; // 1 / 2 / 2 = 0
@@ -257,7 +257,7 @@ int a = 1 >> 2; // 1 / 2 / 2 = 0
 
 ######    Java内存的结构分析图
 
-![image-20240601104013668](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240601104013668.png)
+![image-20240601104013668](images/Java笔记/image-20240601104013668.png)
 
 #### 成员方法
 
@@ -291,15 +291,15 @@ int a = 1 >> 2; // 1 / 2 / 2 = 0
 
 在方法内置空只是将p指向的地址变成null，原本的地址值仍然存在。
 
-![image-20240601133712394](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240601133712394.png)
+![image-20240601133712394](images/Java笔记/image-20240601133712394.png)
 
 JVM的内存 
 
 方法的**递归**调用
 
-![image-20240602095724450](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240602095724450.png)
+![image-20240602095724450](images/Java笔记/image-20240602095724450.png)
 
-![image-20240602100938530](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240602100938530.png)
+![image-20240602100938530](images/Java笔记/image-20240602100938530.png)
 
 **递归重要规则**
 
@@ -420,7 +420,7 @@ public int sum(int... nums){
 
 7. <u>一旦定义了自己的构造器,默认的构造器就覆盖了，就不能再使用默认的无参构造器，除非显式的定义一下。</u>
 
-![image-20240602175543271](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240602175543271.png)
+![image-20240602175543271](images/Java笔记/image-20240602175543271.png)
 
 **流程分析（面试题）**
 
@@ -454,7 +454,7 @@ this的注意事项和使用细节
 
 **访问修饰符**
 
-![image-20240604201922282](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240604201922282.png)
+![image-20240604201922282](images/Java笔记/image-20240604201922282.png)
 
 
 
@@ -493,7 +493,7 @@ this的注意事项和使用细节
 
 子类创建的内存布局图如下所示：
 
-![image-20240605115833950](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240605115833950.png)
+![image-20240605115833950](images/Java笔记/image-20240605115833950.png)
 
 ##### super关键字
 
@@ -513,13 +513,13 @@ super 给编程带来的便利/细节
 
 2. 当子类中有和父类中的成员（属性和方法)重名时，为了访问父类的成员，必须通过super。如果没有重名，使用super、this、直接访问是一样的效果!
 
-   ![image-20240606000538475](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240606000538475.png)
+   ![image-20240606000538475](images/Java笔记/image-20240606000538475.png)
 
 3. super的访问不限于直接父类，如果爷爷类和本类中有同名的成员，也可以使用super去访问爷爷类的成员;如果多个基类（上级类）中都有同名的成员，使用super访问遵循就近原则。A->B->C，当然也需要遵守访问权限的相关规则。
 
    ##### **super 和 this 的比较**
 
-   ![image-20240607182612623](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240607182612623.png)
+   ![image-20240607182612623](images/Java笔记/image-20240607182612623.png)
 
 
 
@@ -537,7 +537,7 @@ super 给编程带来的便利/细节
 
 重写 和 重载 的区别
 
-![image-20240607183225374](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240607183225374.png)
+![image-20240607183225374](images/Java笔记/image-20240607183225374.png)
 
 
 
@@ -554,7 +554,7 @@ super 给编程带来的便利/细节
    (2)编译类型在定义对象时，就确定了，不能改变
 
    (3)运行类型是可以变化的
-   
+
    (4)编译类型看定义时 = 号的左边，运行类型看 = 号的右边
 
 多态注意事项和细节讨论
@@ -700,7 +700,7 @@ shift + F8:跳出方法
 
 - 类变量内存布局：
 
-![image-20240608214722916](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240608214722916.png)
+![image-20240608214722916](images/Java笔记/image-20240608214722916.png)
 
 有些书说在方法区...，jdk版本有关系，*记住一点*：static 变量是对象共享
 
@@ -880,11 +880,11 @@ class A{
 
 2. 类什么时候被加载**( 重要！！！背下来)**
 
-   1) 创建对象实例时(new)
+   1. 创建对象实例时(new)
 
-   2) 创建子类对象实例，父类也会被加载。而且，父类先被加载，子类后被加载
+   2. 创建子类对象实例，父类也会被加载。而且，父类先被加载，子类后被加载
 
-   3) 使用类的静态成员时(静态属性,静态方法)
+   3. 使用类的静态成员时(静态属性,静态方法)
 
       案例演示:A类 extends B类 的静态块
 
@@ -897,11 +897,12 @@ class A{
    2) 调用普通代码块和普通属性的初始化(注意:普通代码块和普通属性初始化调用的优先级一样,如果有多个普通代码块和多个普通属性初始化，则按定义顺序调用)
    3) 调用构造方法。
 
-5) 构造方法(构造器)的最前面其实隐含了super()和调用普通代码块，新写一个类演示[截图+说明],
+5. 构造方法(构造器)的最前面其实隐含了super()和调用普通代码块，新写一个类演示[截图+说明],
 
    静态相关的代码块，属性初始化，在类加载时，就执行完毕，因此是优先于构造器和普通代码块执行的.
 
-6) 我们看一下创建一个**子类时(继承关系)**，他们的静态代码块，静态属性初始化，普通代码块，普通属性初始化，构造方法的**调用顺序**如下:
+6. 我们看一下创建一个**子类时(继承关系)**，他们的静态代码块，静态属性初始化，普通代码块，普通属性初始化，构造方法的**调用顺序**如下:
+
    1. 父类的静态代码块和静态属性(优先级一样,按定义顺序执行)
    2. 子类的静态代码块和静态属性(优先级一样，按定义顺序执行)
    3. 父类的普通代码块和普通属性初始化(优先级一样，按定义顺序执行)
@@ -910,13 +911,14 @@ class A{
    6. 子类的构造方法**//面试题**
       A，B,  C 类演示【10Min ]55 CodeBlockDetail04.java
 
-7) 静态代码块只能直接调用静态成员(静态属性和静态方法)，普通代码块可以调用任意成员。
+7. 静态代码块只能直接调用静态成员(静态属性和静态方法)，普通代码块可以调用任意成员。
 
 
 
 **单例设计模式**
 
 - 什么是单例模式	单例(单个的实例)
+
   1. 所谓类的单例设计模式，就是采取一定的方法保证在整个的软件系统中，对某个类只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法
   2. 单例模式有两种方式:1)  饿汉式         2)   懒汉式
 
@@ -926,12 +928,13 @@ class A{
 
   [单例模式-饿汉式]步骤如下:（饿汉式可能造成创建了对象，但是没有使用）
 
-  1) 构造器私有化，防止直接 new
-  2) 类的内部创建对象
+  1. 构造器私有化，防止直接 new
 
-  3) 向外暴露一个静态的公共方法 getInstance
+  2. 类的内部创建对象
 
-  4) 代码实现
+  3. 向外暴露一个静态的公共方法 getInstance
+
+  4. 代码实现
 
      ```java
      // 为什么是饿汉式？
@@ -964,12 +967,13 @@ class A{
 
   只有当用户使用getInstance时，才返回Cat对象，后面再调用时，会返回上次创建的Cat对象，从而保证了单例。
 
-  1) 构造器私有化，防止直接 new
-  2) 定义一个static静态属性对象
+  1. 构造器私有化，防止直接 new
 
-  3) 提供一个 public 的static 方法，可以返回一个Cat对象
+  2. 定义一个static静态属性对象
 
-  4) 代码实现
+  3. 提供一个 public 的static 方法，可以返回一个Cat对象
+
+  4. 代码实现
 
      ```java
      // 懒汉式
@@ -1084,17 +1088,17 @@ public int addOne(final int x){//下面的代码是否有误，为什么?
 
 - 抽象类的介绍
 
-1) 用abstract关键字来修饰一个类时,这个类就叫抽象类
+1. 用abstract关键字来修饰一个类时,这个类就叫抽象类
 
    访问修饰符  abstract  类名{
    }
 
-2)  用 abstract 关键字来修饰一个方法时,这个方法就是抽象方法
+2. 用 abstract 关键字来修饰一个方法时,这个方法就是抽象方法
    访问修饰符  abstract  返回类型  方法名(参数列表);//没有方法体
 
-3) 抽象类的价值更多作用是在于设计,是设计者设计好后，让子类继承并实现抽象类()
+3. 抽象类的价值更多作用是在于设计,是设计者设计好后，让子类继承并实现抽象类()
 
-4) 抽象类,是考官比较爱问的知识点,在框架和设计模式使用较多
+4. 抽象类,是考官比较爱问的知识点,在框架和设计模式使用较多
 
 - 抽象类使用的注意事项和细节讨论 
 
@@ -1134,17 +1138,17 @@ public int addOne(final int x){//下面的代码是否有误，为什么?
 
 - 注意事项和细节
 
-  1) 接口不能被实例化
+  1. 接口不能被实例化
 
-  2) 接口中所有的方法是 public方法，接口中抽象方法，可以不用abstract修饰
+  2. 接口中所有的方法是 public方法，接口中抽象方法，可以不用abstract修饰
 
-  3) 一个普通类实现接口,就必须将该接口的所有方法都实现
+  3. 一个普通类实现接口,就必须将该接口的所有方法都实现
 
-  4) 抽象类实现接口，可以不用实现接口
+  4. 抽象类实现接口，可以不用实现接口
 
-  5) 一个类同时可以实现多个接口
+  5. 一个类同时可以实现多个接口
 
-  6) 接口中的属性,只能是final的，而且是public static final 修饰符。
+  6. 接口中的属性,只能是final的，而且是public static final 修饰符。
 
      比如:int a=1;实际上是public static final int a=1; (必须初始化)
 
@@ -1154,24 +1158,24 @@ public int addOne(final int x){//下面的代码是否有误，为什么?
      }
      ```
 
-  7) 接口中属性的访问形式:接口名.属性名
+  7. 接口中属性的访问形式:接口名.属性名
 
-  8) 一个接口不能继承其它的类,但是可以继承多个别的接口[举例]
+  8. 一个接口不能继承其它的类,但是可以继承多个别的接口[举例]
      interface A extends B,C
 
-  9) 接口的修饰符只能是public和默认，这点和类的修饰符是一样的。
+  9. 接口的修饰符只能是public和默认，这点和类的修饰符是一样的。
 
 - 接口和继承的关系
 
   实现接口vs继承类
 
-  1) 接口和继承解决的问题不同
+  1. 接口和继承解决的问题不同
 
      继承的价值主要在于:解决代码的**复用性和可维护性。**
 
      接口的价值主要在于:设计，设计好**各种规范**(方法)，让其它类去实现这些方法。
 
-  2) 接口比继承更加灵活
+  2. 接口比继承更加灵活
 
      接口比继承更加灵活，继承是满足is - a的关系，而接口只需满足like - a的关系。
 
@@ -1179,7 +1183,7 @@ public int addOne(final int x){//下面的代码是否有误，为什么?
 
 - 接口的多态特性
 
-  1) 多态参数(前面案例体现)
+  1. 多态参数(前面案例体现)
      在前面的 Usb 接口案例，Usb usb，既可以接收手机对象，又可以接收相机对象，就体现了接口多态(接口引用可以指向实现了接口的类的对象)
 
      ```java
@@ -1203,7 +1207,7 @@ public int addOne(final int x){//下面的代码是否有误，为什么?
      
      ```
 
-  2) 多态数组
+  2. 多态数组
      演示一个案例:给Usb数组中，存放 Phone 和 相机对象，Phone类还有一个特有的方法call()，请遍历Usb数组，如果是Phone对象，除了调用Usb接口定义的方法外，还需要调用Phone特有方法 call.
 
      ```java
@@ -1246,7 +1250,7 @@ public int addOne(final int x){//下面的代码是否有误，为什么?
      }
      ```
 
-  3) 接口存在多态传递现象
+  3. 接口存在多态传递现象
 
      ```java
      /**
@@ -1463,17 +1467,17 @@ abstract class Animal {
 
 说明:静态内部类是定义在外部类的成员位置，并且有static修饰
 
-1) .可以直接访问外部类的所有静态成员，包含私有的，但不能直接访问非静态成员
+1. .可以直接访问外部类的所有静态成员，包含私有的，但不能直接访问非静态成员
 
-2) 可以添加任意访问修饰符(public、protected、默认、private),因为它的地位就是一个成员
+2. 可以添加任意访问修饰符(public、protected、默认、private),因为它的地位就是一个成员
 
-3) 作用域：同其他的成员，为整个类体
+3. 作用域：同其他的成员，为整个类体
 
-4) 静态内部类---访问---->外部类(比如:静态属性)[访问方式:直接访问所有静态成员]
+4. 静态内部类---访问---->外部类(比如:静态属性)[访问方式:直接访问所有静态成员]
 
-5) 外部类---访问------>静态内部类访问方式:创建对象,再访问
+5. 外部类---访问------>静态内部类访问方式:创建对象,再访问
 
-6) 外部其他类---访问----->静态内部类
+6. 外部其他类---访问----->静态内部类
 
    ```java
    // 方式1
@@ -1486,7 +1490,7 @@ abstract class Animal {
    // 编写一个静态方法,通过  类名.方法名  可以返回静态内部类的对象实例.
    ```
 
-7) 如果外部类和静态内部类的成员重名时，静态内部类访问的时，默认遵循就近原则，如果想访问外部类的成员，则可以使用(外部类名.成员)去访问
+7. 如果外部类和静态内部类的成员重名时，静态内部类访问的时，默认遵循就近原则，如果想访问外部类的成员，则可以使用(外部类名.成员)去访问
 
 
 
@@ -1532,7 +1536,7 @@ abstract class Animal {
        }
    ```
 
-2) 使用enum关键字实现枚举
+2. 使用enum关键字实现枚举
 
    使用enum来实现前面的枚举案例，看老师演示，主要体会和自定义类实现枚举不同的地方
 
@@ -1565,6 +1569,7 @@ abstract class Animal {
    ```
 
 - enum关键字实现枚举注意事项
+
   1) 当我们使用enum 关键字开发一个枚举类时，默认会继承 Enum 类[如何证明]
   2) 传统的public static final Season2 SPRING = new Season2("春天","温暖");简化成SPRING("春天","温暖")，这里必须知道，它调用的是哪个构造器.
   3) 如果使用无参构造器 创建 枚举对象，则实参列表和小括号都可以省略
@@ -1585,9 +1590,9 @@ abstract class Animal {
 
 - enum 实现接口
 
-  1) 使用 enum 关键字后，就不能再继承其它类了，因为 enum 会隐式继承Enum.而 Java 是单继承机制。
+  1. 使用 enum 关键字后，就不能再继承其它类了，因为 enum 会隐式继承Enum.而 Java 是单继承机制。
 
-  2) 枚举类和普通类一样，可以实现接口，如下形式。
+  2. 枚举类和普通类一样，可以实现接口，如下形式。
 
      enum  类名  implements  接口1,接口2{}
 
@@ -1595,13 +1600,13 @@ abstract class Animal {
 
 **注解**
 
-1) 注解(Annotation)也被称为元数据(Metadata)，用于修饰解释包、类、方法、属性、构造器、局部变量等数据信息。
+1. 注解(Annotation)也被称为元数据(Metadata)，用于修饰解释包、类、方法、属性、构造器、局部变量等数据信息。
 
-2) 和注释一样，注解不影响程序逻辑，但注解可以被编译或运行，相当于嵌入在代码中的补充信息。
+2. 和注释一样，注解不影响程序逻辑，但注解可以被编译或运行，相当于嵌入在代码中的补充信息。
 
-3) 在JavaSE中，注解的使用目的比较简单，例如标记过时的功能，忽略警告等。在JavaEE中注解占据了更重要的角色，例如用来配置应用程序的任何切面，代替java EE旧版中所遗留的繁冗代码和XML配置等。
+3. 在JavaSE中，注解的使用目的比较简单，例如标记过时的功能，忽略警告等。在JavaEE中注解占据了更重要的角色，例如用来配置应用程序的任何切面，代替java EE旧版中所遗留的繁冗代码和XML配置等。
 
-4) 使用 Annotation 时要在其前面增加@符号,并把该 Annotation 当成一个修饰符使用。用于修饰它支持的程序元素
+4. 使用 Annotation 时要在其前面增加@符号,并把该 Annotation 当成一个修饰符使用。用于修饰它支持的程序元素
 
    三个基本的 Annotation：
 
@@ -1635,6 +1640,7 @@ abstract class Animal {
 5) 生成@SupperssWarnings时，不用背，直接点击左侧的黄色提示，就可以选择(注意可以指定生成的位置)
 
 元注解的种类(使用不多，了解,不用深入研究)
+
 1) Retention//指定注解的作用范围,三种SOURCE,CLASS,RUNTIME
 2) Target//指定注解可以在哪些地方使用
 3) Documented//指定该注解是否会在javadoc体现
@@ -1669,9 +1675,9 @@ abstract class Animal {
   异常处理就是当异常发生时，对异常处理的方式。
 - 异常处理的方式（如果程序员，没有显示是处理异常，默认throws）
   1) try-catch-finally
-  程序员在代码中捕获发生的异常，自行处理
-  1)  throws
-  将发生的异常抛出，交给调用者(方法)来处理，最顶级的处理者就是JVM
+     程序员在代码中捕获发生的异常，自行处理
+  1) throws
+     将发生的异常抛出，交给调用者(方法)来处理，最顶级的处理者就是JVM
 
 把自定义异常做成运行时异常，好处时，我们可以使用默认的处理机制。
 
@@ -1714,7 +1720,7 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
          int n3 = integer2;
 ```
 
-![image-20240612102100931](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240612102100931.png)
+![image-20240612102100931](images/Java笔记/image-20240612102100931.png)
 
 ​	**三元运算符是一个整体，要看精度最高的那个。（面试题）**
 
@@ -1738,7 +1744,7 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
   - 面试题
 
-![image-20240612104411070](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240612104411070.png)
+![image-20240612104411070](images/Java笔记/image-20240612104411070.png)
 
 ```java
 要点：This method will always cache values in the range -128 to 127
@@ -1749,7 +1755,7 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
     }
 ```
 
-![image-20240612110036968](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240612110036968.png)
+![image-20240612110036968](images/Java笔记/image-20240612110036968.png)
 
 ​	示例七中的 == 判断的是值，因为有一边是基本数据类型，Integer执行了自行拆箱功能
 
@@ -1759,13 +1765,13 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
 - String类的理解和创建对象
 
-  1) String 对象用于保存字符串，也就是一组字符序列 
+  1. String 对象用于保存字符串，也就是一组字符序列 
 
-  2) 字符串常量对象是用双引号括起的字符序列。例如:"你好"、"12.97"."boy"等·
+  2. 字符串常量对象是用双引号括起的字符序列。例如:"你好"、"12.97"."boy"等·
 
-  3) 字符串的字符使用Unicode字符编码，一个字符(不区分字母还是汉字)占两个字节。
+  3. 字符串的字符使用Unicode字符编码，一个字符(不区分字母还是汉字)占两个字节。
 
-  4) String类较常用构造方法(其它看手册):
+  4. String类较常用构造方法(其它看手册):
 
      String s1 = new String()；
 
@@ -1775,15 +1781,15 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
      String s4 = new String(char[]a,int start Index,int count);
 
-  5) String 类实现了 接口 Serializable 【String 可以串行化:可以在网络传输】                   
+  5. String 类实现了 接口 Serializable 【String 可以串行化:可以在网络传输】                   
 
      ​				接口Comparable 【String对象可以比较大小】
 
-  6) String是final类，不能被其他的类继承*，代表不可变的字符序列。*
+  6. String是final类，不能被其他的类继承*，代表不可变的字符序列。*
 
-  7) String有属性 private final char value[];用于存放字符串内容'
+  7. String有属性 private final char value[];用于存放字符串内容'
 
-  8) 一定要注意:value 是一个final类型，不可以修改(需要功力,指的是数据存放的地址)。
+  8. 一定要注意:value 是一个final类型，不可以修改(需要功力,指的是数据存放的地址)。
 
 - 创建String对象的两种方式
 
@@ -1796,7 +1802,7 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
      如果常量池没有"hyx"，重新创建,如果有，直接通过value指向。最终指向的是*堆中*的空间地址。
   3) 画出两种方式的内存分布图
 
-<img src="C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240612112910197.png" alt="image-20240612112910197" style="zoom: 80%;" />
+<img src="images/Java笔记/image-20240612112910197.png" alt="image-20240612112910197" style="zoom: 80%;" />
 
 - 字符串的特性
 
@@ -1826,7 +1832,7 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
   如何理解！！！
 
-<img src="C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240612134609585.png" alt="image-20240612134609585" style="zoom:80%;" />
+<img src="images/Java笔记/image-20240612134609585.png" alt="image-20240612134609585" style="zoom:80%;" />
 
 
 
@@ -1902,10 +1908,12 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
   ```
 
 - String VS StringBuffer
+
   1) String保存的是字符串常量，里面的值不能更改，每次String类的更新实际上就是更改地址，效率较低
   2) StringBuffer保存的是字符串变量，里面的值可以更改，每次StringBuffer的更新实际上可以更新内容，不用每次更新地址,效率较高  //这个放在堆.
 
 - StringBuffer类常见方法
+
   - 增append
   - 删delete(start,end)
   - 改replace(start, end, string)//将start----end间的内容替换掉,不含end
@@ -1919,7 +1927,7 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
 - 基本介绍
   1)  一个可变的字符序列。此类提供一个与StringBuffer兼容的API，但不保证同步(StringBuilder不是线程安全)。该类被设计用作 StringBuffer的一个简易替换，*用在字符串缓冲区被**单个线程使用**的时候*。如果可能,建议优先采用该类,因为在大多数实现中，它比 StringBuffer要快[后面测]。
-  2) 在 StringBuilder上的主要操作是append和insert方法，可重载这些方法，以接受任意类型的数据。
+  2)  在 StringBuilder上的主要操作是append和insert方法，可重载这些方法，以接受任意类型的数据。
 
 
 
@@ -1934,8 +1942,8 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 4. StringBuilder:可变字符序列、效率最高、线程不安全
 
 5. String使用注意说明:
-    String s="a";  //创建了一个字符串
-    s += "b" ;//实际上原来的"a"字符串对象已经丢弃了，现在又产生了一个字符串s+"b”(也就是"ab")。如果多次执行这些改变串内容的操作，会导致大量副本字符串对象存留在内存中，降低效率。如果这样的操作放到循环中，会极大影响程序的性能。
+   String s="a";  //创建了一个字符串
+   s += "b" ;//实际上原来的"a"字符串对象已经丢弃了，现在又产生了一个字符串s+"b”(也就是"ab")。如果多次执行这些改变串内容的操作，会导致大量副本字符串对象存留在内存中，降低效率。如果这样的操作放到循环中，会极大影响程序的性能。
 
   **结论:如果我们对String做大量修改,不要使用String**
 
@@ -1945,13 +1953,13 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
 使用的原则,结论:
 
-1) 如果字符串存在大量的修改操作，一般使用StringBuffer 或StringBuilder
+1. 如果字符串存在大量的修改操作，一般使用StringBuffer 或StringBuilder
 
-2) 如果字符串存在大量的修改操作，并在单线程的情况,使用 StringBuilder
+2. 如果字符串存在大量的修改操作，并在单线程的情况,使用 StringBuilder
 
-3) 如果字符串存在大量的修改操作，并在多线程的情况,使用 StringBuffer
+3. 如果字符串存在大量的修改操作，并在多线程的情况,使用 StringBuffer
 
-4) 如果我们字符串很少修改，被多个对象引用，使用String,比如配置信息等
+4. 如果我们字符串很少修改，被多个对象引用，使用String,比如配置信息等
 
    StringBuilder的方法使用和StringBuffer一样,不再说。
 
@@ -1967,11 +1975,11 @@ throw	手动生成异常对象的关键字	方法体中				  异常对象
 
   1. abs绝对值
 
-  2.  pow求幂
+  2. pow求幂
 
-  3.  ceil向上取整
+  3. ceil向上取整
 
-  4.  floor向下取整
+  4. floor向下取整
 
   5. round 四舍五入
 
@@ -2000,19 +2008,19 @@ Arrays里面包含了一系列静态方法，用于管理或操作数组(比如�
 2. sort 排序(自然排序和定制排序)       Integer arr[]= {1,-1,7,0,89};
 
 3. binarySearch通过二分搜索法进行查找，要求必须排好序
-    int index = Arrays.binarySearch(arr,3);
+   int index = Arrays.binarySearch(arr,3);
 
 4. copyOf 数组元素的复制
-    Integer[] newArr = Arrays.copyOf(arr, arr.length);
+   Integer[] newArr = Arrays.copyOf(arr, arr.length);
 
-5.  fill数组元素的填充
-    Integer[] num = new Integer{9,3,2};
+5. fill数组元素的填充
+   Integer[] num = new Integer{9,3,2};
 
   	Arrays.fill(num,99);
 
 6. equals比较两个数组元素内容是否完全一致boolean equals = Arrays.equals(arr, arr2);
 
-7.  asList将一组值，转换成list
+7. asList将一组值，转换成list
 
   List<lnteger> asList = Arrays.asList(2,3,4,5,6,1);
 
@@ -2027,9 +2035,9 @@ System类常见方法和案例
 1) exit 退出当前程序
 
 2. arraycopy:复制数组元素，比较适合底层调用,一般使用 Arrays.copyOf 完成复制数组.
-    int[] src={1,2.3};
-    int[] dest = new int[3];
-    System.arraycopy(src, 0, dest, 0,3);
+   int[] src={1,2.3};
+   int[] dest = new int[3];
+   System.arraycopy(src, 0, dest, 0,3);
 
   从src原数组索引为0的位置开始拷贝，到目标数组dest的0索引，拷贝三个数据。
 
@@ -2051,6 +2059,7 @@ System类常见方法和案例
 #### 日期类
 
 第一代日期类
+
 1. Date:精确到毫秒，代表特定的瞬间
 
 2. SimpleDateFormat:格式和解析日期的类
@@ -2074,7 +2083,7 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 
 第三代日期类常见方法
 
-1) LocalDate(日期)、LocalTime(时间)、LocalDateTime(日期时间)JDK8加入
+1. LocalDate(日期)、LocalTime(时间)、LocalDateTime(日期时间)JDK8加入
 
    LocalDate只包含日期，可以获取日期字段
    LocalTime只包含时间,可以获取时间字段
@@ -2099,10 +2108,10 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
   案例演示:;
 
   ```java
-  Instant now = Instant.now();
-  System.out.println(now);
-  Date date = Date.from(now);
-  Instant instant = date.tolnstant();
+Instant now = Instant.now();
+System.out.println(now);
+Date date = Date.from(now);
+Instant instant = date.tolnstant();
   ```
 
 4) 第三代日期类更多方法LocalDateTime类
@@ -2130,13 +2139,13 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 
   Collection接口有两个重要的子接口 List Set，他们的实现子类都是单列集合。
 
-![image-20240613112554491](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240613112554491.png)
+![image-20240613112554491](images/Java笔记/image-20240613112554491.png)
 
 ​	双列集合
 
 ​	Map 接口的实现子类 是双列集合，存放 key-value。
 
-![image-20240613113121037](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240613113121037.png)
+![image-20240613113121037](images/Java笔记/image-20240613113121037.png)
 
 ### Collection接口
 
@@ -2150,6 +2159,7 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
   4) Collection接口没有直接的实现子类,是通过它的子接口Set 和List来实现的
 
 - Collection接口常用方法,以实现子类ArrayList来演示. CollectionMethod.java
+
   1) add:添加单个元素
   2) remove:删除指定元素
   3) contains:查找元素是否存在
@@ -2227,7 +2237,7 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 
 - List的三种遍历方式[ArrayList, LinkedList, Vector]
 
-  1) 方式一:使用iterator
+  1. 方式一:使用iterator
 
      ```java
      Iterator iter = col.iterator();
@@ -2236,14 +2246,14 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
      }
      ```
 
-  2) 方式二:使用增强for
+  2. 方式二:使用增强for
 
      ```java
      for(Object o:col){
      }
      ```
 
-  3) 方式三:使用普通for
+  3. 方式三:使用普通for
 
      ```java
      for(int i=o;i<list.size0;i++){
@@ -2255,17 +2265,18 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 #### ArrayList
 
 - ArrayList的注意事项
+
   1) permits all elements, including null ,ArrayList可以加入nul,并且多个
   2) ArrayList是由*数组来实现*数据存储的
   3) ArrayList 基本等同于Vector,除了ArrayList是线程不 安全(执行效率高）看源码.,在多线程情况下，不建议使用ArrayList。
 
--   **ArrayList的底层操作机制源码分析(重点，难点.)**ArrayListSource.java
+- **ArrayList的底层操作机制源码分析(重点，难点.)**ArrayListSource.java
 
-  1) ArrayList中维护了一个Object类型的数组elementData. [debug 看源码]transient Object[] elementData;
+  1. ArrayList中维护了一个Object类型的数组elementData. [debug 看源码]transient Object[] elementData;
 
-  2) 当创建ArrayList对象时，如果使用的是无参构造器，则初始elementData容量为0，**第1次添加，则扩容elementData为10，如需要再次扩容，则扩容elementData为1.5倍。**
+  2. 当创建ArrayList对象时，如果使用的是无参构造器，则初始elementData容量为0，**第1次添加，则扩容elementData为10，如需要再次扩容，则扩容elementData为1.5倍。**
 
-  3) 如果使用的是指定大小的构造器，则初始elementData容量为指定大小，**如果需要扩容,则直接扩容elementData为1.5倍。**
+  3. 如果使用的是指定大小的构造器，则初始elementData容量为指定大小，**如果需要扩容,则直接扩容elementData为1.5倍。**
 
      transient：表示瞬间短暂的,表示该属性不会被序列化
 
@@ -2340,6 +2351,7 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 #### Vector
 
   Vector的基本介绍   Vector .java
+
 1) Vector类的定义说明
 2) vector底层也是一个对象数组，protected object[] elementData;
 3) Vector是线程同步的,即线程安全, Vector类的操作方法带有**synchronized**
@@ -2348,7 +2360,7 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 - Vector和ArrayList的比较
 
 
-​	![image-20240613220317105](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240613220317105.png)
+​	![image-20240613220317105](images/Java笔记/image-20240613220317105.png)
 
 
 
@@ -2401,12 +2413,12 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
     }
 ```
 
-![image-20240614000244402](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240614000244402.png)
+![image-20240614000244402](images/Java笔记/image-20240614000244402.png)
 
 - ArrayList和LinkedList的比较
 
 
-![image-20240614092517741](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240614092517741.png)
+![image-20240614092517741](images/Java笔记/image-20240614092517741.png)
 
 如何选择ArrayList和LinkedList:
 
@@ -2494,15 +2506,15 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 
 - LinkedHashSet底层机制示意图
 
-  1) 在LinkedHastSet中维护了一个hash表和双向链表 （LinkedHashSet有 head 和 tail）
+  1. 在LinkedHastSet中维护了一个hash表和双向链表 （LinkedHashSet有 head 和 tail）
 
-  2) 每一个节点有before 和after属性,这样可以形成双向链表
+  2. 每一个节点有before 和after属性,这样可以形成双向链表
 
-  3) 在添加一个元素时，先求hash值，在求索引..确定该元素在table的位置，然后将添加的元素加入到双向链
+  3. 在添加一个元素时，先求hash值，在求索引..确定该元素在table的位置，然后将添加的元素加入到双向链
 
      表(如果已经存在，不添加[原则和hashset一样])
 
-  4) 这样的话，我们遍历LinkedHashSet也能确保插入顺序和遍历顺序一致
+  4. 这样的话，我们遍历LinkedHashSet也能确保插入顺序和遍历顺序一致
 
 
 ##### Set接口实现类->TreeSet
@@ -2533,7 +2545,7 @@ JDK 1.0中包含了一个java.util.Date类,但是它的大多数方法已经在J
 
 Map里面有个table表是以数组+链表+红黑树 来组织 HashMap$Node<K,V> 的。为了方便管理，它将Node封装成Entry，放入EntrySet。除此之外，它还提供KeySet集合（本质是Set） 和 Values集合（本质是Collection）
 
-![image-20240614212818838](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240614212818838.png)
+![image-20240614212818838](images/Java笔记/image-20240614212818838.png)
 
 - Map接口的常用方法
   1) put:添加
@@ -2547,6 +2559,7 @@ Map里面有个table表是以数组+链表+红黑树 来组织 HashMap$Node<K,V>
 #### **Map接口实现类->HashMap**
 
 - Map接口遍历方法
+
   1) containsKey:查找键是否存在
   2) keySet:获取所有的键
   3) entrySet:获取所有关系k-v
@@ -2555,6 +2568,7 @@ Map里面有个table表是以数组+链表+红黑树 来组织 HashMap$Node<K,V>
 - Map小结
 
 - HashMap小结
+
   1) Map接口的常用实现类:HashMap、Hashtable和Properties.
   2) HashMap是 Map 接口使用频率最高的实现类。
   3) HashMap 是以 key-val对的方式来存储数据[案例Entry]
@@ -2590,8 +2604,9 @@ Map里面有个table表是以数组+链表+红黑树 来组织 HashMap$Node<K,V>
 #### **Map接口实现类->HashTable**
 
 - HashTable的基本介绍
+
   1. 存放的元素是键值对:即 K-V
-  2.  hashtable的键和值都不能为null，否则会抛出NullPointerException
+  2. hashtable的键和值都不能为null，否则会抛出NullPointerException
   3. hashTable使用方法基本上和HashMap一样
   4. hashTable是线程安全的，hashMap是线程不安全的
   5. 简单看下底层结构
@@ -2603,7 +2618,7 @@ Map里面有个table表是以数组+链表+红黑树 来组织 HashMap$Node<K,V>
 
 - HashTable 和 HashMap 对比
 
-  ![image-20240616000804168](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240616000804168.png)
+  ![image-20240616000804168](images/Java笔记/image-20240616000804168.png)
 
 #### **Map接口实现类->Properties(继承 Hashtable)**
 
@@ -2694,9 +2709,9 @@ public class TreeMap_ {
 
 在开发中，选择什么集合实现类，主要取决于业务操作特点，然后根据集合实现类特性进行选择，分析如下:
 
-1) 先判断存储的类型(一组对象[单列]或一组键值对[双列])
+1. 先判断存储的类型(一组对象[单列]或一组键值对[双列])
 
-2) 一组对象:Collection接口
+2. 一组对象:Collection接口
 
    ​	允许重复:List
 
@@ -2712,7 +2727,7 @@ public class TreeMap_ {
 
    ​		插入和取出顺序一致:LinkedHashSet，维护数组+双向链表
 
-3) 一组键值对:Map
+3. 一组键值对:Map
 
    ​	键无序:HashMap [底层是: 哈希表 jdk7:数组+链表，jdk8:数组+链表+红黑树]
 
@@ -2728,9 +2743,9 @@ public class TreeMap_ {
 
 - Collections工具类介绍
 
-  1) Collections是一个操作 Set、List和Map等集合的工具类
+  1. Collections是一个操作 Set、List和Map等集合的工具类
 
-  2) Collections中提供了一系列静态的方法对集合元素进行排序、查询和修改等操作
+  2. Collections中提供了一系列静态的方法对集合元素进行排序、查询和修改等操作
 
      - 排序操作:(均为static方法)
 
@@ -2741,6 +2756,7 @@ public class TreeMap_ {
        5) swap(List，int，int):将指定 list集合中的i处元素和j处元素进行交换
 
      - 查找、替换
+
        1) Object max(Collection):根据元素的自然顺序，返回给定集合中的最大元素
        2) Object max(Collection,Comparator):根据Comparator 指定的顺序.返回给定集合中的最大元素
        3) Object min(Collection)
@@ -2774,13 +2790,13 @@ public class TreeMap_ {
 
   老韩理解:泛(广泛)型(类型=> Integer,String,Dog
 
-  1) 泛型又称参数化类型，是Jdk5.0出现的新特性,解决数据类型的安全性问题
+  1. 泛型又称参数化类型，是Jdk5.0出现的新特性,解决数据类型的安全性问题
 
-  2) 在类声明或实例化时只要指定好需要的具体的类型即可。
+  2. 在类声明或实例化时只要指定好需要的具体的类型即可。
 
-  3) Java泛型可以保证如果程序在编译时没有发出警告，运行时就不会产生ClassCastException异常。同时，代码更加简洁、健壮
+  3. Java泛型可以保证如果程序在编译时没有发出警告，运行时就不会产生ClassCastException异常。同时，代码更加简洁、健壮
 
-  4) 泛型的作用是:可以在类声明时通过一个标识表示类中某个属性的类型,或者是某个方法的返回值的类型，或者是参数类型。[有点难，举例GenericO3.java]
+  4. 泛型的作用是:可以在类声明时通过一个标识表示类中某个属性的类型,或者是某个方法的返回值的类型，或者是参数类型。[有点难，举例GenericO3.java]
 
      ```java
      class Person<E> {
@@ -2819,13 +2835,13 @@ public class TreeMap_ {
 
 ##### 泛型使用的注意事项和细节
 
-1) interface List<T>o , public class HashSet<E>{}...等等
+1. interface List<T>o , public class HashSet<E>{}...等等
 
    说明:T,E只能是引用类型
 
-2) 在指定泛型具体类型后，可以传入该类型或者其子类类型
+2. 在指定泛型具体类型后，可以传入该类型或者其子类类型
 
-3) 泛型使用形式
+3. 泛型使用形式
 
    List<Integer> list1 =new ArrayList<lnteger>();
 
@@ -2916,9 +2932,12 @@ JUint
   2. 进程是程序的一次执行过程，或是正在运行的一个程序。是动态过程:有它自身的产生、存在和消亡的过程
 
 - 什么是线程
+
   1) 线程由进程创建的，是进程的一个实体
   2) 一个进程可以拥有多个线程,如下图
+
 - 其他相关概念
+
   1. 单线程:同一个时刻，只允许执行一个线程
   2. 多线程:同一个时刻，可以执行多个线程，比如:一个qq进程,可以同时打开多个聊天窗口,一个迅雷进程,可以同时下载多个文件
   3. 并发:同一个时刻，多个任务交替执行,造成一种 “貌似同时” 的错觉，简单的说，单核cpu实现的多任务就是并发。
@@ -2936,7 +2955,7 @@ JUint
      2) java设计者们提供了另外一个方式创建线程，就是通过实现Runnable接口来创建线程	
 3. 利用Callable接口和Future接口方式实现
 
-![image-20240708092324592](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240708092324592.png)
+![image-20240708092324592](images/Java笔记/image-20240708092324592.png)
 
 ##### 继承Thread vs 实现Runable的区别
 
@@ -2987,6 +3006,7 @@ JUint
 ##### 线程常用方法
 
 - 常用方法第一组
+
   1) setName //设置线程名称，使之与参数name 相同
   2) getName //返回该线程的名称
   3) start //使该线程开始执行;Java虚拟机底层调用该线程的 start0方法
@@ -2998,18 +3018,18 @@ JUint
 
 - 注意事项和细节
 
-  1) start底层会创建新的线程，调用run，run就是一个简单的方法调用，不会启动新线程
+  1. start底层会创建新的线程，调用run，run就是一个简单的方法调用，不会启动新线程
 
-  2) 线程优先级的范围
+  2. 线程优先级的范围
 
      - | `public static final int` | `MAX_PRIORITY`  | `10` |
        | :------------------------ | --------------- | ---- |
        | `public static final int` | `MIN_PRIORITY`  | `1`  |
        | `public static final int` | `NORM_PRIORITY` | `5`  |
 
-  3) interrupt，中断线程，但并没有真正的结束线程。所以一般用于中断正在休眠线程
+  3. interrupt，中断线程，但并没有真正的结束线程。所以一般用于中断正在休眠线程
 
-  4) sleep:线程的静态方法，使当前线程休眠
+  4. sleep:线程的静态方法，使当前线程休眠
 
 - 常用方法第二组
 
@@ -3030,11 +3050,11 @@ JUint
 
    
 
-1. 常见的守护线程:垃圾回收机制
+3. 常见的守护线程:垃圾回收机制
 
 #### 线程的生命周期（新建、就绪、运行、等待、超时等待、阻塞、死亡）
 
- ![image-20240618003331471](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240618003331471.png)
+ ![image-20240618003331471](images/Java笔记/image-20240618003331471.png)
 
 
 
@@ -3059,13 +3079,13 @@ JUint
   2. synchronized还可以放在方法声明中, 表示整个方法-为同步方法
 
     ```java
-    public synchronized void m (String name){
-    	//需要被同步的代码
-    }
+  public synchronized void m (String name){
+  	//需要被同步的代码
+  }
     ```
 
-	3. 如何理解:
-就好像某小伙伴上厕所前先把门关上(上锁).完事后再出来(解锁).那么其它小伙伴就可在使用厕所了
+  3. 如何理解:
+     就好像某小伙伴上厕所前先把门关上(上锁).完事后再出来(解锁).那么其它小伙伴就可在使用厕所了
 
 
 
@@ -3164,9 +3184,10 @@ JUint
 ##### IO流原理及流的分类
 
 - Java lO流原理
+
   1. I/O是Input/Output的缩写，I/O技术是非常实用的技术，用于处理数据传输，如读/写文件，网络通讯等。
   2. Java程序中，对于数据的输入/输出操作以”流(stream)”的方式进行。
-  3.  java.io包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过方法输入或输出数据。
+  3. java.io包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过方法输入或输出数据。
   4. 输入input:读取外部数据(磁盘、光盘等存储设备的数据)到程序(内存)中。
   5. 输出output:将程序(内存)数据输出到磁盘、光盘等存储设备中
 
@@ -3186,7 +3207,7 @@ JUint
 
 ##### IO流体系图-常用的类
 
-![image-20240619224223934](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619224223934.png)
+![image-20240619224223934](images/Java笔记/image-20240619224223934.png)
 
 - ##### InputStream:字节输入流
 
@@ -3217,10 +3238,11 @@ JUint
 
     相关APl:
 
-    1) new String(char):将char[]转换成String
-    2) new String(char[],off,len):将char[]的指定部分转换成String
+      1) new String(char):将char[]转换成String
+      2) new String(char[],off,len):将char[]的指定部分转换成String
 
   - FileWriter常用方法
+
     1. new FileWriter(File/String):覆盖模式，相当于流的指针在首端2
 
     2. new FileWriter(File/String,true):追加模式，相当于流的指针在尾端
@@ -3253,7 +3275,7 @@ JUint
 
 - 节点流和处理流一览图
 
-![image-20240619140524138](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619140524138.png)  
+![image-20240619140524138](images/Java笔记/image-20240619140524138.png)  
 
 - 节点流和处理流的区别和联系
   1. 节点流是底层流/低级流,直接跟数据源相接。
@@ -3358,22 +3380,22 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
 
 - ##### 注意事项和细节说明
 
-  1) 读写顺序要一致
+  1. 读写顺序要一致
 
-  2) 要求实现序列化或反序列化对象，需要实现Serializable
+  2. 要求实现序列化或反序列化对象，需要实现Serializable
 
-  3) 序列化的类中建议添加SerialVersionUID,为了提高版本的兼容性
+  3. 序列化的类中建议添加SerialVersionUID,为了提高版本的兼容性
 
      ```java
          // serialVersionUID : 序列化的版本号，可以提高兼容性
          private static final long serialVersionUID = 1L;
      ```
 
-  4) 序列化对象时，默认将里面所有属性都进行序列化，但除了static或transient修饰的成员·
+  4. 序列化对象时，默认将里面所有属性都进行序列化，但除了static或transient修饰的成员·
 
-  5) 序列化对象时，要求里面属性的类型也需要实现序列化接口
+  5. 序列化对象时，要求里面属性的类型也需要实现序列化接口
 
-  6) 序列化具备可继承性,也就是如果某类已经实现了序列化，则它的所有子类也已经默认实现了序列化
+  6. 序列化具备可继承性,也就是如果某类已经实现了序列化，则它的所有子类也已经默认实现了序列化
 
 
 
@@ -3397,9 +3419,9 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
   3) 当处理纯文本数据时，如果使用字符流效率更高，并且可以有效解决中文问题，所以建议将字节流转换成字符流
   4) 可以在使用时指定编码格式(比如utf-8, gbk , gb2312, ISO8859-1等)
 
-![image-20240619164206945](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619164206945.png)
+![image-20240619164206945](images/Java笔记/image-20240619164206945.png)
 
-![image-20240619164133897](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619164133897.png)
+![image-20240619164133897](images/Java笔记/image-20240619164133897.png)
 
 - 打印流-PrintStream和PrintWriter
 
@@ -3411,14 +3433,14 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
 
 - 基本介绍
 
-  1) 专门用于读写配置文件的集合类
+  1. 专门用于读写配置文件的集合类
      配置文件的格式:
      键=值
      键=值
 
-  2) 注意:键值对不需要有空格,值不需要用引号一起来。默认类型是String
+  2. 注意:键值对不需要有空格,值不需要用引号一起来。默认类型是String
 
-  3) Properties的常见方法
+  3. Properties的常见方法
 
      load: 加载配置文件的键值对到Properties对象
 
@@ -3437,6 +3459,7 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
 ##### 网络的相关概念
 
 - 网络
+
   1. 概念:两台或多台设备通过一定物理设备连接起来构成了网络
   2. 根据网络的覆盖范围不同，对网络进行分类:
      - 局域网:覆盖范围最小,仅仅覆盖一个教室或一个机房
@@ -3444,6 +3467,7 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
      - 广域网:覆盖范围最大，可以覆盖全国，甚至全球，万维网是广域网的代表
 
 - ip地址
+
   1. 概念:用于唯一标识网络中的每台计算机
   2. 查看ip地址: ipconfig
   3. ip地址的表示形式:点分十进制XX.XX.XX.XX
@@ -3454,7 +3478,7 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
 
 - ipv4地址分类
 
-  ![image-20240619230452113](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240619230452113.png)
+  ![image-20240619230452113](images/Java笔记/image-20240619230452113.png)
 
 
 
@@ -3491,6 +3515,7 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
   的IP协议和传输层的TCP协议组成的。[示意图】
 
 - TCP和UDP
+
   - TCP协议（传输控制协议）:
     1. 使用TCP协议前，须先建立TCP连接，形成传输数据通道
     2. 传输前，采用"三次握手"方式，是**可靠**的
@@ -3530,17 +3555,17 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
 - ##### TCP网络通信编程
 
   - netstat 指令
-  
+
     1. netstat -an可以查看当前主机网络情况，包括**端口监听**情况和**网络连接**情况
-  
+
     2. netstat -an | more可以分页显示
-  
+
     3. 要求在dos控制台下执行win+r
-  
+
        说明:
-  
+
        (1)Listening表示某个端口在监听
-  
+
        (2)如果有一个外部程序(客户端)连接到该端口，就会显示一条连接信息.
 
 当客户端连接到服务端后，实际上客户端也是通过一个端口和服务端进行通讯的，这个端口是TCP/IP来分配的，是不确定的，是随机的.。
@@ -3585,7 +3610,7 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
   1. 反射机制允许程序在执行期借助于Reflection API取得任何类的内部信息(比如成员变量,构造器，成员方法等等)，并能操作对象的属性及方法。反射在设计模式和框架底层都会用到
   2. 加载完类之后，在堆中就产生了一个Class类型的对象(一个类只有一个Class对象)，这个对象包含了类的完整结构信息。通过这个对象得到类的结构。这个对象就像一面镜子，透过这个镜子看到类的结构,所以,形象的称之为:反射
 
-![image-20240620173327863](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240620173327863.png)
+![image-20240620173327863](images/Java笔记/image-20240620173327863.png)
 
 - Java反射机制可以完成
   1. 在运行时判断任意一个对象所属的类
@@ -3606,7 +3631,7 @@ BufferedOutputStream是字节流,实现缓冲的输出流，可以将多个字�
 
 - 反射调用优化-关闭访问检查
   1. Method和Field、Constructor对象都有setAccessible()方法
-  2.  setAccessible作用是启动和禁用访问安全检查的开关
+  2. setAccessible作用是启动和禁用访问安全检查的开关
   3. 参数值为true表示反射的对象在使用时取消访问检查，提高反射的效率。参数值为false则表示反射的对象执行访问检查
 
 #### 								Class类
@@ -3723,7 +3748,7 @@ public class Class02 {
 
 - ### **类加载过程图（面试题）**
 
-![image-20240620221837123](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240620221837123.png)
+![image-20240620221837123](images/Java笔记/image-20240620221837123.png)
 
 - #### *类加载*各阶段完成任务
 
@@ -3733,7 +3758,7 @@ public class Class02 {
 
   解析：把符号引用转成直接引用
 
-![image-20240620222718010](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240620222718010.png)
+![image-20240620222718010](images/Java笔记/image-20240620222718010.png)
 
 - ##### 加载阶段
 
