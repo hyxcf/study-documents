@@ -6,7 +6,7 @@
 
 补充：
 
-![image-20240307151308904](C:\Users\32596\AppData\Roaming\Typora\typora-user-images\image-20240307151308904.png)
+![image-20240906042544146](Android学习/image-20240906042544146.png)
 
 2.视图间距
 
@@ -50,7 +50,7 @@
 ●HorizontalScrollView，它是水平方向的滚动视图;水平方向滚动时，layout_width属性值设置为wrap_content，layout_height属性值设置为match_parent。
 ```
 
-![image-20240307161413643](C:/Users/32596/AppData/Roaming/Typora/typora-user-images/image-20240307161413643.png)
+![image-20240906042615704](Android学习/image-20240906042615704.png)
 
 #### 按钮触控
 
